@@ -1,0 +1,57 @@
+alias cc='gcc -Wall -o'
+          Wall  : Permet d'afficher l'ensemble des avertissements produits par la compilation
+          -o    : Permet de choisir le nom de l'exécutable généré. (sinon a.out)
+
+jupyter-notebook  : Pour ouvrir le tp
+
+
+--------------------- Librairies ---------------------
+#include <stdlib.h>
+#include <stdio.h>
+#include <assert.h>
+
+--------------------- Valeur printf ---------------------
+%d, %ld : permet d'afficher un entier, un entier long.
+%u, %lu : permet d'afficher un entier non signé, un entier non signé long.
+%f, %lf, %Lf : permet d'afficher un flottant, un double et un long double.
+%c : permet d'afficher un caractère.
+
+--------------------- Opérateurs logiques ---------------------
+Le EtAlors algorithmique : &&,
+Le OuSinon algorithmique : ||,
+La négation : !
+
+--------------------- Itération ---------------------
+i++; équivalent à i = i+1;
+i--; équivalent à i = i-1;.
+
+--------------------- Lire un caractère ---------------------
+  // Lire un entier
+scanf("%i", &monentier);
+  // Lire un flottant avec 2 décimales maximum.
+scanf("%1.2f", &monfloat);
+  // Lire deux caracteres d'affilée non blancs
+scanf("%c %c", &c1, &c2);
+
+--------------------- Boucle for ---------------------
+  for (instruction_init_compteur; condition_boucle; instruction_incr_compteur) { SEQUENCE }
+
+    _ex :_      for (int i = 1; i <= LIMITE; i++) { SEQUENCE }
+
+--------------------- Les types enregistrement ---------------------
+
+enum Jour { LUNDI, MARDI, MERCREDI, JEUDI, VENDREDI, SAMEDI, DIMANCHE};
+
+--------------------- Les types enregistrement ---------------------
+
+struct Date {
+    int jour;
+    Mois mois;
+    int annee;
+};
+
+
+
+
+Exo 12! frequence ok
+Ex 13

@@ -1,0 +1,1 @@
+Je n'ai pas eu le temps d'y réfléchir encore beaucoup mais je pense qu'il faut dans un premier temps récupérer ces signaux pour ne pas que l'action par défaut se produise.

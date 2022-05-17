@@ -79,7 +79,11 @@ void desactiver (int p) {
 void diffuser(char *dep) { 
 	/* (**** à faire ****) envoi du message référencé par dep à tous les actifs */
 	int i = 0;
-	while (i < MAXPARTICIPANTS)
+	while (i < MAXPARTICIPANTS) {
+		if (participants[i].actif) {
+			
+		}
+	}
 	
 }
 

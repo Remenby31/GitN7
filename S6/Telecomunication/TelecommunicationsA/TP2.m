@@ -38,6 +38,7 @@ ylabel("Amplitude (V)");
 g = [0 ; conv(h,h) ; 0];
 Lt = 0:Te:2*Ts;
 figure,plot(Lt,g);
+title("conv")
 xlabel("temps (s)");
 ylabel("Amplitude (V)");
 

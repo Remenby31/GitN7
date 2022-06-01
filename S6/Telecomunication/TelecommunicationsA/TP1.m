@@ -19,6 +19,9 @@ Bits1 = (Tableau-0.5)*2;
 Signal1 = [Bits1' ; zeros(nbit,Ns-1)'];
 Signal1 = Signal1(:);
 
+plot(Bits1);
+label("Modulateur 1");
+
 % Filtre de mise en forme
 h = ones(Ns,1);
 signal_filtre1 = filter(h,1,Signal1);
@@ -111,7 +114,8 @@ ylabel("Amplitude (V)");
 
 %% Question 3
 figure,semilogy(F,Dsp1,'k',F,Dsp2,'r',F,Dsp3,'b');
-legend('Dsp1','Dsp2','Dsp3');
+legend('Dsp Modulateur 1','Dsp Modulateur 2','Dsp Modulateur 3');
+ylim([1,5*10^3]);
 xlabel("Fréquence (Hz)");
 ylabel("Amplitude (V)");
 

@@ -1,0 +1,694 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.11.4)  19 MAY 2022 10:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Rapport.tex
+(./Rapport.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2018/08/11 v1.3c Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/latex/a4wide/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texlive/texmf-dist/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks17
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2020/01/30 v3.5g French support from the babel system
+
+
+Package babel-french Warning: Option `frenchb' for Babel is *deprecated*,
+(babel-french)                it might be removed sooner or later. Please
+(babel-french)                use `french' instead; reported on input line 35.
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2020/01/30 v3.5g French support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen137
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count176
+)
+Package babel Info: \l@acadian = using hyphenrules for french
+(babel)             (\language27) on input line 91.
+Package babel Info: \l@canadien = using hyphenrules for french
+(babel)             (\language27) on input line 92.
+\FB@nonchar=\count177
+Package babel Info: Making : an active character on input line 419.
+Package babel Info: Making ; an active character on input line 420.
+Package babel Info: Making ! an active character on input line 421.
+Package babel Info: Making ? an active character on input line 422.
+\FBguill@level=\count178
+\FBold@everypar=\toks18
+\FB@Mht=\dimen138
+\mc@charclass=\count179
+\mc@charfam=\count180
+\mc@charslot=\count181
+\std@mcc=\count182
+\dec@mcc=\count183
+\c@FBcaption@count=\count184
+\listindentFB=\dimen139
+\descindentFB=\dimen140
+\labelindentFB=\dimen141
+\labelwidthFB=\dimen142
+\leftmarginFB=\dimen143
+\parindentFFN=\dimen144
+\FBfnindent=\dimen145
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count185
+\float@exts=\toks19
+\float@box=\box45
+\@float@everytoks=\toks20
+\@floatcapt=\box46
+)
+(/usr/share/texlive/texmf-dist/tex/latex/bbold/bbold.sty
+Package: bbold 1994/04/06 Bbold symbol package
+LaTeX Font Info:    Redeclaring math alphabet \mathbb on input line 42.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count186
+\l__pdf_internal_box=\box47
+)
+(./Rapport.aux
+
+LaTeX Warning: Label `figure: TEBComp1' multiply defined.
+
+)
+\openout1 = `Rapport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count187
+\scratchdimen=\dimen146
+\scratchbox=\box48
+\nofMPsegments=\count188
+\nofMParguments=\count189
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count190
+\MPscratchDim=\dimen147
+\MPnumerator=\count191
+\makeMPintoPDFobject=\count192
+\everyMPtoPDFconversion=\toks22
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Info: Redefining \degres on input line 15.
+LaTeX Info: Redefining \dots on input line 15.
+LaTeX Info: Redefining \up on input line 15.
+<inp_n7.png, id=1, 428.35031pt x 69.25874pt>
+File: inp_n7.png Graphic file (type png)
+<use inp_n7.png>
+Package pdftex.def Info: inp_n7.png  used on input line 19.
+(pdftex.def)             Requested size: 142.26378pt x 23.00233pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./inp_n7.png>] (./Rapport.
+toc)
+\tf@toc=\write3
+\openout3 = `Rapport.toc'.
+
+
+(./Rapport.lof [2])
+\tf@lof=\write4
+\openout4 = `Rapport.lof'.
+
+ [3]
+<SMod1.png, id=24, 376.2858pt x 304.0158pt>
+File: SMod1.png Graphic file (type png)
+<use SMod1.png>
+Package pdftex.def Info: SMod1.png  used on input line 47.
+(pdftex.def)             Requested size: 284.52756pt x 229.88075pt.
+<DSPMod1.png, id=25, 377.2494pt x 304.0158pt>
+File: DSPMod1.png Graphic file (type png)
+<use DSPMod1.png>
+Package pdftex.def Info: DSPMod1.png  used on input line 55.
+(pdftex.def)             Requested size: 284.52756pt x 229.31017pt.
+ [4 <./SMod1.png (PNG copy)>]
+<SMod2.png, id=32, 368.0952pt x 304.0158pt>
+File: SMod2.png Graphic file (type png)
+<use SMod2.png>
+Package pdftex.def Info: SMod2.png  used on input line 76.
+(pdftex.def)             Requested size: 284.52756pt x 234.99283pt.
+ [5 <./DSPMod1.png (PNG copy)>]
+<DSPMod2.png, id=37, 377.2494pt x 304.0158pt>
+File: DSPMod2.png Graphic file (type png)
+<use DSPMod2.png>
+Package pdftex.def Info: DSPMod2.png  used on input line 84.
+(pdftex.def)             Requested size: 284.52756pt x 229.31017pt.
+ [6 <./SMod2.png (PNG copy)> <./DSPMod2.png (PNG copy)>]
+<SMod3.png, id=41, 376.2858pt x 304.0158pt>
+File: SMod3.png Graphic file (type png)
+<use SMod3.png>
+Package pdftex.def Info: SMod3.png  used on input line 96.
+(pdftex.def)             Requested size: 284.52756pt x 229.88075pt.
+<DSPMod3.png, id=42, 377.2494pt x 304.0158pt>
+File: DSPMod3.png Graphic file (type png)
+<use DSPMod3.png>
+Package pdftex.def Info: DSPMod3.png  used on input line 104.
+(pdftex.def)             Requested size: 284.52756pt x 229.31017pt.
+ [7 <./SMod3.png (PNG copy)> <./DSPMod3.png (PNG copy)>]
+<DSPComp.png, id=47, 377.2494pt x 303.534pt>
+File: DSPComp.png Graphic file (type png)
+<use DSPComp.png>
+Package pdftex.def Info: DSPComp.png  used on input line 116.
+(pdftex.def)             Requested size: 284.52756pt x 228.94676pt.
+<SRecep.png, id=48, 368.0952pt x 304.0158pt>
+File: SRecep.png Graphic file (type png)
+<use SRecep.png>
+Package pdftex.def Info: SRecep.png  used on input line 132.
+(pdftex.def)             Requested size: 284.52756pt x 234.99283pt.
+ [8 <./DSPComp.png (PNG copy)>]
+<RepGlob.png, id=52, 373.8768pt x 312.6882pt>
+File: RepGlob.png Graphic file (type png)
+<use RepGlob.png>
+Package pdftex.def Info: RepGlob.png  used on input line 140.
+(pdftex.def)             Requested size: 284.52756pt x 237.96039pt.
+<eyediagram1.png, id=53, 358.4592pt x 301.6068pt>
+File: eyediagram1.png Graphic file (type png)
+<use eyediagram1.png>
+Package pdftex.def Info: eyediagram1.png  used on input line 148.
+(pdftex.def)             Requested size: 284.52756pt x 239.41267pt.
+ [9 <./SRecep.png (PNG copy)> <./RepGlob.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 1
+56.
+(/usr/share/texlive/texmf-dist/tex/latex/bbold/Ubbold.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
+
+ []
+
+<RI8000.png, id=57, 361.35pt x 286.671pt>
+File: RI8000.png Graphic file (type png)
+<use RI8000.png>
+Package pdftex.def Info: RI8000.png  used on input line 168.
+(pdftex.def)             Requested size: 199.16928pt x 158.00635pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 168--169
+ [] 
+ []
+
+<eyediagram2.png, id=58, 364.2408pt x 301.6068pt>
+File: eyediagram2.png Graphic file (type png)
+<use eyediagram2.png>
+Package pdftex.def Info: eyediagram2.png  used on input line 175.
+(pdftex.def)             Requested size: 199.16928pt x 164.9224pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 175--176
+ [] 
+ []
+
+[10 <./eyediagram1.png (PNG copy)>]
+<RF8000.png, id=66, 367.6134pt x 304.0158pt>
+File: RF8000.png Graphic file (type png)
+<use RF8000.png>
+Package pdftex.def Info: RF8000.png  used on input line 185.
+(pdftex.def)             Requested size: 284.52756pt x 235.31291pt.
+<RI1000.png, id=67, 361.35pt x 286.671pt>
+File: RI1000.png Graphic file (type png)
+<use RI1000.png>
+Package pdftex.def Info: RI1000.png  used on input line 198.
+(pdftex.def)             Requested size: 199.16928pt x 158.00635pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 198--199
+ [] 
+ []
+
+<eyediagram3.png, id=68, 364.2408pt x 301.6068pt>
+File: eyediagram3.png Graphic file (type png)
+<use eyediagram3.png>
+Package pdftex.def Info: eyediagram3.png  used on input line 205.
+(pdftex.def)             Requested size: 199.16928pt x 164.9224pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 205--206
+ [] 
+ []
+
+[11 <./RI8000.png (PNG copy)> <./eyediagram2.png (PNG copy)> <./RF8000.png (PNG
+ copy)>]
+<RF1000.png, id=72, 367.6134pt x 304.0158pt>
+File: RF1000.png Graphic file (type png)
+<use RF1000.png>
+Package pdftex.def Info: RF1000.png  used on input line 215.
+(pdftex.def)             Requested size: 284.52756pt x 235.31291pt.
+ [12 <./RI1000.png (PNG copy)> <./eyediagram3.png (PNG copy)> <./RF1000.png (PN
+G copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+<eyediagram4.png, id=76, 358.4592pt x 301.6068pt>
+File: eyediagram4.png Graphic file (type png)
+<use eyediagram4.png>
+Package pdftex.def Info: eyediagram4.png  used on input line 233.
+(pdftex.def)             Requested size: 284.52756pt x 239.41267pt.
+<subeyediagram1.png, id=77, 1445.4pt x 724.95844pt>
+File: subeyediagram1.png Graphic file (type png)
+<use subeyediagram1.png>
+Package pdftex.def Info: subeyediagram1.png  used on input line 241.
+(pdftex.def)             Requested size: 455.24408pt x 228.32993pt.
+
+Overfull \hbox (30.65784pt too wide) in paragraph at lines 241--242
+ [][] 
+ []
+
+[13 <./eyediagram4.png (PNG copy)>]
+<TEBthsim1.png, id=82, 352.6776pt x 305.4612pt>
+File: TEBthsim1.png Graphic file (type png)
+<use TEBthsim1.png>
+Package pdftex.def Info: TEBthsim1.png  used on input line 249.
+(pdftex.def)             Requested size: 284.52756pt x 246.44807pt.
+ [14 <./subeyediagram1.png (PNG copy)> <./TEBthsim1.png (PNG copy)>]
+<eyediagram5.png, id=86, 358.4592pt x 302.0886pt>
+File: eyediagram5.png Graphic file (type png)
+<use eyediagram5.png>
+Package pdftex.def Info: eyediagram5.png  used on input line 265.
+(pdftex.def)             Requested size: 284.52756pt x 239.79512pt.
+<subeyediagram2.png, id=87, 1445.4pt x 724.95844pt>
+File: subeyediagram2.png Graphic file (type png)
+<use subeyediagram2.png>
+Package pdftex.def Info: subeyediagram2.png  used on input line 277.
+(pdftex.def)             Requested size: 455.24408pt x 228.32993pt.
+
+Overfull \hbox (30.65784pt too wide) in paragraph at lines 277--278
+ [][] 
+ []
+
+[15 <./eyediagram5.png (PNG copy)>]
+<TEBthsim2.png, id=91, 352.6776pt x 305.4612pt>
+File: TEBthsim2.png Graphic file (type png)
+<use TEBthsim2.png>
+Package pdftex.def Info: TEBthsim2.png  used on input line 283.
+(pdftex.def)             Requested size: 284.52756pt x 246.44807pt.
+ [16 <./subeyediagram2.png (PNG copy)> <./TEBthsim2.png (PNG copy)>]
+<eyediagram6.png, id=95, 421.575pt x 316.18124pt>
+File: eyediagram6.png Graphic file (type png)
+<use eyediagram6.png>
+Package pdftex.def Info: eyediagram6.png  used on input line 297.
+(pdftex.def)             Requested size: 284.52756pt x 213.39865pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
+
+ []
+
+<TESthsim1.png, id=96, 352.6776pt x 305.4612pt>
+File: TESthsim1.png Graphic file (type png)
+<use TESthsim1.png>
+Package pdftex.def Info: TESthsim1.png  used on input line 317.
+(pdftex.def)             Requested size: 199.16928pt x 172.50665pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 317--318
+ [] 
+ []
+
+<TEBthsim3.png, id=97, 352.6776pt x 305.4612pt>
+File: TEBthsim3.png Graphic file (type png)
+<use TEBthsim3.png>
+Package pdftex.def Info: TEBthsim3.png  used on input line 324.
+(pdftex.def)             Requested size: 199.16928pt x 172.50665pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 324--325
+ [] 
+ []
+
+[17 <./eyediagram6.png (PNG copy)>]
+<TEBComp1.png, id=101, 352.6776pt x 305.4612pt>
+File: TEBComp1.png Graphic file (type png)
+<use TEBComp1.png>
+Package pdftex.def Info: TEBComp1.png  used on input line 336.
+(pdftex.def)             Requested size: 284.52756pt x 246.44807pt.
+ [18 <./TESthsim1.png (PNG copy)> <./TEBthsim3.png (PNG copy)> <./TEBComp1.png 
+(PNG copy)>]
+<ChainePorteuse1.png, id=105, 743.77875pt x 475.7775pt>
+File: ChainePorteuse1.png Graphic file (type png)
+<use ChainePorteuse1.png>
+Package pdftex.def Info: ChainePorteuse1.png  used on input line 354.
+(pdftex.def)             Requested size: 369.88582pt x 236.61043pt.
+<ChainePorteuse2.png, id=107, 742.27313pt x 386.94562pt>
+File: ChainePorteuse2.png Graphic file (type png)
+<use ChainePorteuse2.png>
+Package pdftex.def Info: ChainePorteuse2.png  used on input line 360.
+(pdftex.def)             Requested size: 369.88582pt x 192.82286pt.
+ [19 <./ChainePorteuse1.png>]
+<SigQuadPhase1.png, id=113, 1445.4pt x 724.95844pt>
+File: SigQuadPhase1.png Graphic file (type png)
+<use SigQuadPhase1.png>
+Package pdftex.def Info: SigQuadPhase1.png  used on input line 370.
+(pdftex.def)             Requested size: 369.88582pt x 185.52014pt.
+<DSPPort1.png, id=114, 1169.8104pt x 641.7576pt>
+File: DSPPort1.png Graphic file (type png)
+<use DSPPort1.png>
+Package pdftex.def Info: DSPPort1.png  used on input line 378.
+(pdftex.def)             Requested size: 369.88582pt x 202.91852pt.
+
+[20 <./ChainePorteuse2.png> <./SigQuadPhase1.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
+
+<TEBthsim4.png, id=119, 352.6776pt x 305.4612pt>
+File: TEBthsim4.png Graphic file (type png)
+<use TEBthsim4.png>
+Package pdftex.def Info: TEBthsim4.png  used on input line 387.
+(pdftex.def)             Requested size: 341.43306pt x 295.73769pt.
+<SigQuadPhase2.png, id=120, 1445.4pt x 724.95844pt>
+File: SigQuadPhase2.png Graphic file (type png)
+<use SigQuadPhase2.png>
+Package pdftex.def Info: SigQuadPhase2.png  used on input line 397.
+(pdftex.def)             Requested size: 369.88582pt x 185.52014pt.
+[21 <./DSPPort1.png (PNG copy)> <./TEBthsim4.png (PNG copy)>]
+<DSPPort2.png, id=124, 381.1038pt x 304.0158pt>
+File: DSPPort2.png Graphic file (type png)
+<use DSPPort2.png>
+Package pdftex.def Info: DSPPort2.png  used on input line 405.
+(pdftex.def)             Requested size: 341.43306pt x 272.3731pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
+
+ []
+
+[22 <./SigQuadPhase2.png (PNG copy)> <./DSPPort2.png (PNG copy)>]
+<ConstRef.png, id=128, 295.8252pt x 289.08pt>
+File: ConstRef.png Graphic file (type png)
+<use ConstRef.png>
+Package pdftex.def Info: ConstRef.png  used on input line 415.
+(pdftex.def)             Requested size: 284.52756pt x 278.04736pt.
+<ConstEbN0_0.png, id=129, 295.8252pt x 289.5618pt>
+File: ConstEbN0_0.png Graphic file (type png)
+<use ConstEbN0_0.png>
+Package pdftex.def Info: ConstEbN0_0.png  used on input line 424.
+(pdftex.def)             Requested size: 199.16928pt x 194.95975pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 424--425
+ [] 
+ []
+
+<ConstEbN0_6.png, id=130, 295.8252pt x 289.5618pt>
+File: ConstEbN0_6.png Graphic file (type png)
+<use ConstEbN0_6.png>
+Package pdftex.def Info: ConstEbN0_6.png  used on input line 431.
+(pdftex.def)             Requested size: 199.16928pt x 194.95975pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 431--432
+ [] 
+ []
+
+[23 <./ConstRef.png (PNG copy)>]
+<TEBComp2.png, id=134, 352.6776pt x 305.4612pt>
+File: TEBComp2.png Graphic file (type png)
+<use TEBComp2.png>
+Package pdftex.def Info: TEBComp2.png  used on input line 441.
+(pdftex.def)             Requested size: 312.9803pt x 271.09055pt.
+ [24 <./ConstEbN0_0.png (PNG copy)> <./ConstEbN0_6.png (PNG copy)> <./TEBComp2.
+png (PNG copy)>]
+<Const4ASK.png, id=138, 287.6346pt x 289.08pt>
+File: Const4ASK.png Graphic file (type png)
+<use Const4ASK.png>
+Package pdftex.def Info: Const4ASK.png  used on input line 457.
+(pdftex.def)             Requested size: 284.52756pt x 285.96512pt.
+<Const4ASK_EbN0_0.png, id=139, 287.6346pt x 289.5618pt>
+File: Const4ASK_EbN0_0.png Graphic file (type png)
+<use Const4ASK_EbN0_0.png>
+Package pdftex.def Info: Const4ASK_EbN0_0.png  used on input line 464.
+(pdftex.def)             Requested size: 199.16928pt x 200.5092pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 464--465
+ [] 
+ []
+
+<Const4ASK_EbN0_6.png, id=140, 287.6346pt x 289.5618pt>
+File: Const4ASK_EbN0_6.png Graphic file (type png)
+<use Const4ASK_EbN0_6.png>
+Package pdftex.def Info: Const4ASK_EbN0_6.png  used on input line 471.
+(pdftex.def)             Requested size: 199.16928pt x 200.5092pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 471--472
+ [] 
+ []
+
+[25 <./Const4ASK.png (PNG copy)>]
+<TEBthsim4ASK.png, id=145, 526.1256pt x 296.7888pt>
+File: TEBthsim4ASK.png Graphic file (type png)
+<use TEBthsim4ASK.png>
+Package pdftex.def Info: TEBthsim4ASK.png  used on input line 481.
+(pdftex.def)             Requested size: 341.43306pt x 192.61154pt.
+<ConstQPSK.png, id=146, 295.8252pt x 289.08pt>
+File: ConstQPSK.png Graphic file (type png)
+<use ConstQPSK.png>
+Package pdftex.def Info: ConstQPSK.png  used on input line 491.
+(pdftex.def)             Requested size: 284.52756pt x 278.04736pt.
+ [26 <./Const4ASK_EbN0_0.png (PNG copy)> <./Const4ASK_EbN0_6.png (PNG copy)> <.
+/TEBthsim4ASK.png (PNG copy)>]
+<ConstQPSK_EbN0_0.png, id=150, 295.8252pt x 289.5618pt>
+File: ConstQPSK_EbN0_0.png Graphic file (type png)
+<use ConstQPSK_EbN0_0.png>
+Package pdftex.def Info: ConstQPSK_EbN0_0.png  used on input line 498.
+(pdftex.def)             Requested size: 199.16928pt x 194.95975pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 498--499
+ [] 
+ []
+
+<ConstQPSK_EbN0_6.png, id=151, 295.8252pt x 289.08pt>
+File: ConstQPSK_EbN0_6.png Graphic file (type png)
+<use ConstQPSK_EbN0_6.png>
+Package pdftex.def Info: ConstQPSK_EbN0_6.png  used on input line 505.
+(pdftex.def)             Requested size: 199.16928pt x 194.63536pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 505--506
+ [] 
+ []
+
+<TEBthsimQPSK.png, id=152, 525.162pt x 296.7888pt>
+File: TEBthsimQPSK.png Graphic file (type png)
+<use TEBthsimQPSK.png>
+Package pdftex.def Info: TEBthsimQPSK.png  used on input line 514.
+(pdftex.def)             Requested size: 341.43306pt x 192.95572pt.
+[27 <./ConstQPSK.png (PNG copy)> <./ConstQPSK_EbN0_0.png (PNG copy)> <./ConstQP
+SK_EbN0_6.png (PNG copy)>]
+<Const8PSK.png, id=156, 295.8252pt x 289.08pt>
+File: Const8PSK.png Graphic file (type png)
+<use Const8PSK.png>
+Package pdftex.def Info: Const8PSK.png  used on input line 524.
+(pdftex.def)             Requested size: 284.52756pt x 278.04736pt.
+<Const8PSK_EbN0_0.png, id=157, 295.8252pt x 289.5618pt>
+File: Const8PSK_EbN0_0.png Graphic file (type png)
+<use Const8PSK_EbN0_0.png>
+Package pdftex.def Info: Const8PSK_EbN0_0.png  used on input line 531.
+(pdftex.def)             Requested size: 199.16928pt x 194.95975pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 531--532
+ [] 
+ []
+
+<Const8PSK_EbN0_6.png, id=158, 295.8252pt x 289.08pt>
+File: Const8PSK_EbN0_6.png Graphic file (type png)
+<use Const8PSK_EbN0_6.png>
+Package pdftex.def Info: Const8PSK_EbN0_6.png  used on input line 538.
+(pdftex.def)             Requested size: 199.16928pt x 194.63536pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 538--539
+ [] 
+ []
+
+[28 <./TEBthsimQPSK.png (PNG copy)> <./Const8PSK.png (PNG copy)>]
+<TEBthsim8PSK.png, id=162, 526.1256pt x 296.7888pt>
+File: TEBthsim8PSK.png Graphic file (type png)
+<use TEBthsim8PSK.png>
+Package pdftex.def Info: TEBthsim8PSK.png  used on input line 548.
+(pdftex.def)             Requested size: 341.43306pt x 192.61154pt.
+<Const16QAM.png, id=163, 287.6346pt x 289.08pt>
+File: Const16QAM.png Graphic file (type png)
+<use Const16QAM.png>
+Package pdftex.def Info: Const16QAM.png  used on input line 558.
+(pdftex.def)             Requested size: 284.52756pt x 285.96512pt.
+ [29 <./Const8PSK_EbN0_0.png (PNG copy)> <./Const8PSK_EbN0_6.png (PNG copy)> <.
+/TEBthsim8PSK.png (PNG copy)>]
+<Const16QAM_EbN0_0.png, id=167, 287.6346pt x 289.08pt>
+File: Const16QAM_EbN0_0.png Graphic file (type png)
+<use Const16QAM_EbN0_0.png>
+Package pdftex.def Info: Const16QAM_EbN0_0.png  used on input line 565.
+(pdftex.def)             Requested size: 199.16928pt x 200.17558pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 565--566
+ [] 
+ []
+
+<Const16QAM_EbN0_6.png, id=168, 287.6346pt x 289.08pt>
+File: Const16QAM_EbN0_6.png Graphic file (type png)
+<use Const16QAM_EbN0_6.png>
+Package pdftex.def Info: Const16QAM_EbN0_6.png  used on input line 572.
+(pdftex.def)             Requested size: 199.16928pt x 200.17558pt.
+
+Overfull \hbox (29.33739pt too wide) in paragraph at lines 572--573
+ [] 
+ []
+
+<TEBthsim16QAM.png, id=169, 526.1256pt x 296.7888pt>
+File: TEBthsim16QAM.png Graphic file (type png)
+<use TEBthsim16QAM.png>
+Package pdftex.def Info: TEBthsim16QAM.png  used on input line 582.
+(pdftex.def)             Requested size: 341.43306pt x 192.61154pt.
+[30 <./Const16QAM.png (PNG copy)> <./Const16QAM_EbN0_0.png (PNG copy)> <./Const
+16QAM_EbN0_6.png (PNG copy)>]
+<TEBComp4.png, id=173, 1161.6198pt x 640.3122pt>
+File: TEBComp4.png Graphic file (type png)
+<use TEBComp4.png>
+Package pdftex.def Info: TEBComp4.png  used on input line 590.
+(pdftex.def)             Requested size: 369.88582pt x 203.88797pt.
+ [31 <./TEBthsim16QAM.png (PNG copy)> <./TEBComp4.png (PNG copy)>] (./Rapport.a
+ux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3820 strings out of 481239
+ 54076 string characters out of 5920377
+ 296581 words of memory out of 5000000
+ 18977 multiletter control sequences out of 15000+600000
+ 546083 words of font info for 62 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 33i,8n,35p,586b,425s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx144
+0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfcc1000.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200
+.pfb>
+Output written on Rapport.pdf (31 pages, 3686545 bytes).
+PDF statistics:
+ 237 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 276 words of extra memory for PDF output out of 10000 (max. 10000000)
+

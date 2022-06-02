@@ -1,0 +1,31 @@
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{4}%
+\contentsline {section}{\numberline {2}\'Etude de modulateurs bande de base}{4}%
+\contentsline {subsection}{\numberline {2.1}Modulateur 1}{4}%
+\contentsline {subsection}{\numberline {2.2}Modulateur 2}{5}%
+\contentsline {subsection}{\numberline {2.3}Modulateur 3}{7}%
+\contentsline {subsection}{\numberline {2.4}Comparaison}{8}%
+\contentsline {section}{\numberline {3}\'Etude des interf\'erences entre symbole et du crit\`ere de Nyquist}{8}%
+\contentsline {subsection}{\numberline {3.1}\'Etude sans canal de transmission}{8}%
+\contentsline {subsection}{\numberline {3.2}\'Etude avec canal de transmission}{10}%
+\contentsline {subsubsection}{\numberline {3.2.1}Fr\'equence de coupure BW = 8000 Hz}{10}%
+\contentsline {subsubsection}{\numberline {3.2.2}Fr\'equence de coupure BW = 1000 Hz}{12}%
+\contentsline {section}{\numberline {4}\'Etude de l'impact du bruit, filtrage adapt\'e, taux d'erreur binaire, efficacit\'e en puissance}{13}%
+\contentsline {subsection}{\numberline {4.1}Chaine de r\'ef\'erence}{13}%
+\contentsline {subsection}{\numberline {4.2}Premi\`ere chaine \`a \'etudier}{15}%
+\contentsline {subsubsection}{\numberline {4.2.1}Chaine sans bruit}{15}%
+\contentsline {subsubsection}{\numberline {4.2.2}Chaine avec bruit}{15}%
+\contentsline {subsection}{\numberline {4.3}Deuxi\`eme chaine \`a \'etudier}{16}%
+\contentsline {subsubsection}{\numberline {4.3.1}Chaine sans bruit}{17}%
+\contentsline {subsubsection}{\numberline {4.3.2}Chaine avec bruit}{17}%
+\contentsline {subsection}{\numberline {4.4}Comparaison efficacit\'e}{18}%
+\contentsline {section}{\numberline {5}\'Etudes de chaines de transmission sur fr\'equence porteuse}{19}%
+\contentsline {subsection}{\numberline {5.1}Utilisation de la chaine passe-bas \'equivalente pour le calcul et l'estimation du taux d'erreur binaire}{19}%
+\contentsline {subsubsection}{\numberline {5.1.1}Implantation de la chaine sur fr\'equence porteuse}{20}%
+\contentsline {subsubsection}{\numberline {5.1.2}Implantation de la chaine passe-bas \'equivalente}{22}%
+\contentsline {subsection}{\numberline {5.2}Comparaison de modulations sur fr\'equence porteuse}{25}%
+\contentsline {subsubsection}{\numberline {5.2.1}Modulation 4-ASK}{25}%
+\contentsline {subsubsection}{\numberline {5.2.2}Modulation QPSK}{26}%
+\contentsline {subsubsection}{\numberline {5.2.3}Modulation 8-PSK}{28}%
+\contentsline {subsubsection}{\numberline {5.2.4}Modulation 16-QAM}{29}%
+\contentsline {subsubsection}{\numberline {5.2.5}Comparaison des chaines de transmission}{31}%

@@ -1,0 +1,55 @@
+\babel@toc {french}{}
+\contentsline {figure}{\numberline {1}{\ignorespaces Signal 1 mapp\'e }}{4}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Densit\'e spectrale de puissance du signal 1 }}{5}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Signal 2 mapp\'e }}{6}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Densit\'e spectrale de puissance du signal 2 }}{6}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Signal 3 mapp\'e }}{7}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Densit\'e spectrale de puissance du signal 3 }}{7}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Densit\'e spectrale de puissance des modulateurs }}{8}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Signal apr\`es filtre de r\'eception }}{9}%
+\contentsline {figure}{\numberline {9}{\ignorespaces R\'eponse impulsionnelle globale sans canal de propagation }}{9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Diagramme de l'oeil sans canal de propagation }}{10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces R\'eponse impulsionnelle $f_c = 8000$ Hz}}{11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagramme de l'oeil pour $f_c = 8000$ Hz}}{11}%
+\contentsline {figure}{\numberline {13}{\ignorespaces R\'eponse fr\'equentielle pour $f_c = 8000$ Hz }}{11}%
+\contentsline {figure}{\numberline {14}{\ignorespaces R\'eponse impulsionnelle $f_c = 1000$ Hz}}{12}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Diagramme de l'oeil pour $f_c = 1000$ Hz}}{12}%
+\contentsline {figure}{\numberline {16}{\ignorespaces R\'eponse fr\'equentielle pour $f_c = 1000$ Hz }}{12}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Diagramme de l'oeil sans canal de propagation }}{13}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Diagramme de l'oeil pour different puissance de bruit }}{14}%
+\contentsline {figure}{\numberline {19}{\ignorespaces TEB simul\'e et th\'eorique en fonction de $\frac {E_b}{N_0}$ }}{14}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Diagramme de l'oeil sans canal de propagation }}{15}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Diagramme de l'oeil pour differentes puissances de bruit }}{16}%
+\contentsline {figure}{\numberline {22}{\ignorespaces TEB simul\'e et th\'eorique en fonction de $\frac {E_b}{N_0}$ }}{16}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Diagramme de l'oeil sans canal de propagation }}{17}%
+\contentsline {figure}{\numberline {24}{\ignorespaces TES simul\'e et th\'eorique en fonction de $\frac {E_b}{N_0}$ }}{18}%
+\contentsline {figure}{\numberline {25}{\ignorespaces TEB simul\'e et th\'eorique en fonction de $\frac {E_b}{N_0}$ }}{18}%
+\contentsline {figure}{\numberline {26}{\ignorespaces TEB simul\'e et th\'eorique en fonction de $\frac {E_b}{N_0}$ }}{18}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Cha\IeC {\^\i }ne de transmission sur porteuse }}{19}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Cha\IeC {\^\i }ne de transmission passe-bas \'equivalente }}{20}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Signal sur fr\'equence porteuse }}{20}%
+\contentsline {figure}{\numberline {30}{\ignorespaces DSP du signal sur fr\'equence porteuse }}{21}%
+\contentsline {figure}{\numberline {31}{\ignorespaces TEB simul\'e et th\'eorique en fonction de $\frac {E_b}{N_0}$ }}{21}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Signal sur fr\'equence porteuse }}{22}%
+\contentsline {figure}{\numberline {33}{\ignorespaces DSP du signal sur fr\'equence porteuse }}{22}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Constellation chaine de reference sortie de mapping }}{23}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 0$ dB }}{24}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 6$ dB }}{24}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Comparaison TEB de la chaine \'equivalente et la chaine sur fr\'equence porteuse }}{24}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Comparaison TEB de la chaine \'equivalente et la chaine sur fr\'equence porteuse (4-ASK) }}{25}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 0$ dB (4-ASK) }}{26}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 6$ dB (4-ASK) }}{26}%
+\contentsline {figure}{\numberline {41}{\ignorespaces TEB simul\'e et th\'eorique modulateur 4-ASK }}{26}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Comparaison TEB de la chaine \'equivalente et la chaine sur fr\'equence porteuse (QPSK) }}{27}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 0$ dB (QPSK) }}{27}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 6$ dB (QPSK) }}{27}%
+\contentsline {figure}{\numberline {45}{\ignorespaces TEB simul\'e et th\'eorique modulateur QPSK }}{28}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Comparaison TEB de la chaine \'equivalente et la chaine sur fr\'equence porteuse (8-PSK) }}{28}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 0$ dB (8-PSK) }}{29}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 6$ dB (8-PSK) }}{29}%
+\contentsline {figure}{\numberline {49}{\ignorespaces TEB simul\'e et th\'eorique modulateur 8-PSK }}{29}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Comparaison TEB de la chaine \'equivalente et la chaine sur fr\'equence porteuse (16-QAM) }}{30}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 0$ dB (16-QAM) }}{30}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Constellation chaine de r\'ef\'erence sortie d'\'echantillonneur $\frac {E_b}{n_0} = 6$ dB (16-QAM) }}{30}%
+\contentsline {figure}{\numberline {53}{\ignorespaces TEB simul\'e et th\'eorique modulateur 16-QAM }}{31}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Comparaison du TEB des differents modulateur }}{31}%

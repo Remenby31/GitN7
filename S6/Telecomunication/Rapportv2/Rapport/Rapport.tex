@@ -1,0 +1,597 @@
+\documentclass[frenchb]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+%Pour utilisation sous unix
+%\usepackage[utf8]{inputenc}
+%\usepackage[utf8x]{inputenc}
+\usepackage{a4wide}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{babel}
+\usepackage{float}
+\usepackage{bbold}
+
+\begin{document}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=5cm]{inp_n7.png}
+\end{figure}
+
+\title{\vspace{4cm} \textbf{Rapport étude en bande de base et fréquence porteuse}}
+\author{Lilian Labiste\\ Jean-Baptiste Prevost }
+\date{\vspace{7cm} Département Sciences du Numérique - Première année \\
+2021-2022 }
+
+\maketitle
+
+\newpage
+\tableofcontents
+\listoffigures
+
+\newpage
+\section{Introduction}
+L'objectif de ce travail est la mise en place de chaines de transmission en bande de base ainsi que sur fréquence porteuse, en passant par la détermination du TEB pour différents rapports signal sur bruit afin de déterminer la chaine la plus efficace.
+
+\section{Étude de modulateurs bande de base}
+
+Dans cette partie l'étude portera sur trois modulateurs avec des mappings ainsi que des filtres de mise en forme différents. Pour chacun de ces modulateurs nous étudierons le signal émis ainsi que sa densité spectrale de puissance. Ainsi, nous pourrons classer ces différents modulateurs par ordre d'efficacité spectrale et identifier les paramètres jouant sur cette dernière.
+
+\subsection{Modulateur 1}
+
+Le premier modulateur étudié est un modulateur dont le mapping est avec des symboles binaires à moyenne nulle, et avec un filtre de mise en forme rectangulaire de durée $T_{s_1} = N_{s_2} \cdot T_e$. Sur la figure \ref{figure: signal1} on peut retrouver le signal avant sa mise en forme par le filtre. Le bit $0$ est le symbole $-1$ et le bit 1 est le symbole $1$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{SMod1.png}
+	\caption{Signal 1 mappé \label{figure: signal1}} 
+\end{figure}
+
+Une fois ce signal mis en forme par le filtre dédié à cette tâche, nous obtenons la figure \ref{figure: DSP1}. Cette figure nous permet d'observer la bande passante de signal et donc son efficacité.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{DSPMod1.png}
+	\caption{Densité spectrale de puissance du signal 1 \label{figure: DSP1}} 
+\end{figure}
+
+
+\subsection{Modulateur 2}
+
+Pour ce deuxième modulateur nous gardons le même filtre de mise en forme mais nous utilisons un mapping différent. Ici nous aurons un mapping 4-aires a moyenne nulle donné par le système suivant :
+
+\[Mapping : \left\{
+\begin{array}{l l l l}
+	11 = -1V \\
+	01 = -3V \\
+	00 = +1V \\
+	10 = +3V
+\end{array} \right. \]
+
+On obtient ainsi le signal sur la figure \ref{figure: signal2}. Grâce a ce mapping le signal émis est deux fois plus court.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{SMod2.png}
+	\caption{Signal 2 mappé \label{figure: signal2}} 
+\end{figure}
+
+Après mise en forme de second signal on obtient la figure \ref{figure: DSP2} suivante :
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{DSPMod2.png}
+	\caption{Densité spectrale de puissance du signal 2 \label{figure: DSP2}} 
+\end{figure}
+
+Contrairement au premier modulateur où la DSP numérique et théorique se superpose, on peut observer sur la figure \ref{figure: DSP2} que la DSP numérique est légèrement au-dessous de la DSP théorique, ce qui indique que ce modulateur est un peu plus performant.
+
+\subsection{Modulateur 3}
+
+Pour ce troisième modulateur on utilisera un mapping binaire a moyenne nulle tout comme pour le premier modulateur implanté. Cependant le filtre de mise en forme sera légèrement plus complexe, puisqu'il s'agit d'un filtre en racine de cosinus surélevé. Dans notre cas ce filtre aura un roll-off noté $\alpha = 0.5$. Pour ce qui est du mapping on le retrouve sur la figure \ref{figure: signal3}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{SMod3.png}
+	\caption{Signal 3 mappé \label{figure: signal3}} 
+\end{figure}
+
+On retrouve le signal après la mise en forme sur la figure \ref{figure: DSP3}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{DSPMod3.png}
+	\caption{Densité spectrale de puissance du signal 3 \label{figure: DSP3}} 
+\end{figure}
+
+Sur la figure \ref{figure: DSP3} on peut observer que la densité spectrale de puissance théorique majore la densité spectrale de puissance numérique.
+
+\subsection{Comparaison}
+
+La figure \ref{figure: DSPComp} représente les densités spectrales de puissance des trois modulateurs, ce qui va nous permettre de les classer en fonction de leurs efficacité spectrale.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{DSPComp.png}
+	\caption{Densité spectrale de puissance des modulateurs \label{figure: DSPComp}} 
+\end{figure}
+
+On peut voir sur la figure ci-dessus que l'encombrement spectral du deuxième modulateur est plus élevé que celui du premier, lui même plus élevé que celui du troisième. On peut donc en conclure, le débit étant le même pour le trois modulateurs, que le plus efficace spectralement est le troisième.
+
+\section{Étude des interférences entre symbole et du critère de Nyquist}
+
+Dans cette deuxième partie il sera question des interférences entre symboles liée a l'échantillonnage du signal reçu, donc cette étude sera liée au critère de Nyquist. Afin d'étudier ce phénomène nous allons implanter une chaine de transmission en bande de base avec et sans canal de propagation. Pour ce faire nous considérerons un mapping binaire a moyenne nulle avec comme filtre de mise en forme et de réception une réponse impulsionnelle rectangulaire de durée $T_s$.
+
+\subsection{Étude sans canal de transmission}
+
+Dans un premier temps nous implanterons une chaine de transmission sans canal de propagation, sur la figure \ref{figure: SignalRec} on retrouve le signal après le filtre de réception.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{SRecep.png}
+	\caption{Signal après filtre de réception \label{figure: SignalRec}} 
+\end{figure}
+
+Ce signal est bien celui qui est attendu en théorie. En effet la convolution de deux réponse impulsionnelles rectangulaire donne une réponse impulsionnelle triangulaire. La figure \ref{figure: RepGlobale} nous montre cette réponse impulsionnelle globale.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{RepGlob.png}
+	\caption{Réponse impulsionnelle globale sans canal de propagation \label{figure: RepGlobale}} 
+\end{figure}
+
+Afin de respecter le critère de Nyquist il faut échantillonner tous les 8 symboles, cet endroit est représenté par le sommet de la figure \ref{figure: RepGlobale}. Afin de confirmer cela il est possible de tracer un diagramme de l'oeil (figure \ref{figure: eyeDiagram1}).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{eyediagram1.png}
+	\caption{Diagramme de l'oeil sans canal de propagation \label{figure: eyeDiagram1}} 
+\end{figure}
+
+Sur la figure \ref{figure: eyeDiagram1} on peut lire qu'il est possible d'échantillonner pour $n_0 = 8$, ce qui confirme la réponse précédente. En échantillonnant aux instants optimaux déterminé précédemment on obtient un $TEB = 0$. De plus, lorsque l'on modifie l'instant optimal le $TEB$ n'est plus nul, ce qui est normal car des interférences entre symboles ont alors lieu.
+
+\subsection{Étude avec canal de transmission}
+
+Maintenant que la chaine de transmission précédente a été implantée nous allons ajouter un canal de propagation à bande limitée mais sans bruit, cela dans le but de voir l'effet de la bande passante sur un signal émis. Pour simuler ce canal de propagation nous allons implanter un filtre passe-bas ayant la réponse impulsionnelle suivante : \\ $$h_c = 2 \frac{f_c}{F_e} \sin_c(2 \frac{f_c}{F_e}) \mathbb{1}_{[-\frac{N-1}{2}; \frac{N-1}{2}]}$$
+où $f_c$ représente la fréquence de coupure et $N$ l'ordre du filtre.\\
+
+Nous implanterons un filtre avec une fréquence de coupure $f_c = 8000$ Hz et un autre avec une fréquence de coupure $f_c = 1000$ Hz.
+
+\subsubsection{Fréquence de coupure BW = 8000 Hz}
+
+En ajoutant ce canal de propagation la chaine de transmission est modifiée. On obtient donc pour ce premier cas la figure \ref{figure: RI8000}. Le diagramme de l'oeil est lui aussi modifié : la figure \ref{figure: eyediagram2} en est sa nouvelle représentation.
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{RI8000.png}
+       \caption{Réponse impulsionnelle $f_c = 8000$  Hz\label{figure: RI8000}}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{eyediagram2.png}
+       \caption{Diagramme de l'oeil pour $f_c = 8000$  Hz\label{figure: eyediagram2}}
+    \end{center}
+\end{minipage}
+\end{figure}
+
+Afin de mieux observer et prédire l'effet de la mise en place du canal de propagation, il est possible de tracer la réponse fréquentielle du canal de propagation, noté $H_c(f)$, ainsi que le produit des réponses fréquentielles des filtres de mise en forme et de réception noté respectivement $H(f)$ et $H_r(f)$. La figure \ref{figure: RF8000} en est la représentation.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{RF8000.png}
+	\caption{Réponse fréquentielle pour $f_c = 8000$ Hz  \label{figure: RF8000}} 
+\end{figure}
+
+On observe bien sur la figure \ref{figure: RF8000} que la réponse fréquentielle du canal englobe la réponse fréquentielle des filtres de mise en forme et de réception. Ceci implique qu'il n'y a pas d'interférence dues à ce canal de propagation, donc le TEB en présence de ce canal avec cette fréquence de coupure est nul.
+
+\subsubsection{Fréquence de coupure BW = 1000 Hz}
+
+En modifiant la fréquence de coupure on modifie les diagrammes obtenus précédemment. On risque donc de créer des interférences, et c'est ce que nous allons voir dans cette sous-partie.
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{RI1000.png}
+       \caption{Réponse impulsionnelle $f_c = 1000$  Hz\label{figure: RI1000}}
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{eyediagram3.png}
+       \caption{Diagramme de l'oeil pour $f_c = 1000$  Hz\label{figure: eyediagram3}}
+    \end{center}
+\end{minipage}
+\end{figure}
+
+Sur la figure \ref{figure: RI1000} on observe que la réponse impulsionnelle est bien différente que celle de la figure \ref{figure: RI8000}. De même pour le diagramme de l'oeil, celui de la figure \ref{figure: eyediagram3} est beaucoup moins clair que celui de la figure \ref{figure: eyediagram2} : cela s'explique par la présence d'interférences. Sur la figure \ref{figure: RF1000}, on peut observer que les réponses fréquentielles se croisent, ce qui provoque des interférences.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{RF1000.png}
+	\caption{Réponse fréquentielle pour $f_c = 1000$ Hz  \label{figure: RF1000}} 
+\end{figure}
+
+A cause de ces interférences, dont on peut observer les causes sur les figures \ref{figure: RF1000} et \ref{figure: eyediagram3}, le TEB n'est plus nul donc tout le message transmis n'est pas lisible.
+
+\section{Étude de l'impact du bruit, filtrage adapté, taux d'erreur binaire, efficacité en puissance}
+
+Maintenant que nous avons implanté et étudié différents modulateurs et canaux de propagation nous allons dans cette troisième partie nous intéresser a l'impact du bruit.
+
+\subsection{Chaine de référence}
+
+Dans un premier temps nous allons implanter une chaine de référence, c'est à dire une chaine sans canal. Pour cela nous allons prendre comme fréquence d'échantillonnage $F_e = 24000$ Hz, et un débit binaire $R_b = 3000$ bits par secondes. Le mapping sera un mapping binaire à moyenne nulle, avec des filtres de mise en forme et de réception rectangulaires de hauteur 1 et de durée $T_s$.\\
+
+Une fois la chaine implantée on trace le diagramme de l'oeil, ici la figure \ref{figure: eyeDiagram4}. On peut notamment lire que pour respecter le critère de Nyquist il faut échantillonner à $n_0 = 8$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{eyediagram4.png}
+	\caption{Diagramme de l'oeil sans canal de propagation \label{figure: eyeDiagram4}} 
+\end{figure}
+
+Maintenant que nous avons déterminé l'instant d'échantillonnage optimal nous allons étudier l'effet du bruit sur notre signal, notamment en regardant différents diagrammes de l'oeil tracés pour des valeurs de $\frac{E_b}{N_0}$ allant de $0$ dB à $8$ dB. Pour des questions de lisibilité des diagrammes de l'oeil le choix de réduire le nombre de bits émis a été diminué. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{subeyediagram1.png}
+	\caption{Diagramme de l'oeil pour different puissance de bruit \label{figure: subeyediagram1}} 
+\end{figure}
+
+Sur la figure \ref{figure: subeyediagram1} on observe bien que plus le rapport signal sur bruit est important moins les interférences sont importantes. On peut mieux observer cet diminution des interférences grâce a la figure \ref{figure: TEBthsim1} où le taux d'erreur binaire théorique et simulé ont été tracé en fonction du rapport signal sur bruit. Pour rappel le TEB théorique vaut $TEB = Q(\sqrt{\frac{E_b}{N_0}})$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{TEBthsim1.png}
+	\caption{TEB simulé et théorique en fonction de $\frac{E_b}{N_0}$ \label{figure: TEBthsim1}} 
+\end{figure}
+
+Sur la figure \ref{figure: TEBthsim1} on observe bien que plus le rapport signal à bruit est élevé plus le TEB diminue. On peut donc jouer sur ce rapport afin d'améliorer nos transmissions. De plus les TEB théorique et simulé correspondent : on a donc une chaine fonctionnelle.
+
+\subsection{Première chaine à étudier}
+
+Maintenant que la chaine de référence est implantée nous allons implanter la première chaine d'étude où le filtre d'émission sera rectangulaire de durée $T_s$ et de hauteur $1$, tandis que le filtre de réception sera une porte de durée $\frac{T_s}{2}$. et de hauteur 1.
+
+\subsubsection{Chaine sans bruit}
+
+Sans bruit et avec un autre filtre de réception, on doit de nouveau déterminer les instants d'échantillonnage optimaux. Comme précédemment on trace le diagramme de l'oeil que l'on retrouve figure \ref{figure: eyeDiagram5}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{eyediagram5.png}
+	\caption{Diagramme de l'oeil sans canal de propagation \label{figure: eyeDiagram5}} 
+\end{figure}
+
+En lisant le diagramme de l'oeil de la figure \ref{figure: eyeDiagram5}, on trouve que les instants optimaux ce situent entre $4$ et $8$. Cependant nous choisirons $t_0 = 8$ car c'est pour cette valeur que le critère de Nyquist est respecté. Maintenant que nous avons cette valeur nous pouvons échantillonner et ainsi vérifier que le TEB vaut $0$.
+
+\subsubsection{Chaine avec bruit}
+
+En ajoutanComparaison à faire DSP\\t du bruit le TEB risque de ne pas être nul et varier en fonction. Pour observer ce phénomène, nous allons faire varier ce bruit afin de quantifier le TEB, comme pour la chaine de référence.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{subeyediagram2.png}
+	\caption{Diagramme de l'oeil pour differentes puissances de bruit \label{figure: subeyediagram2}} 
+\end{figure}le
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{TEBthsim2.png}
+	\caption{TEB simulé et théorique en fonction de $\frac{E_b}{N_0}$ \label{figure: TEBthsim2}} 
+\end{figure}
+
+\subsection{Deuxième chaine à étudier}
+
+Pour cette deuxième chaine il s'agira d'un mapping 4-aires à moyenne nulle, avec des filtres de mise en forme et de réception rectangulaires de durée $T_s$ et de hauteur $1$.
+
+\subsubsection{Chaine sans bruit}
+
+Le mapping ayant changé des précédentes chaine implémentées le diagramme de l'oeil est différent. Il est donc nécessaire de le retracer, cela dans le but de déterminer les nouveaux instants d'échantillonnage optimaux. La figure \ref{figure: eyeDiagram6} en est la représentation et d'après cette figure l'instant d'échantillonnage optimal vaut 8. En effet, pour cette valeur il n'est possible d'obtenir que 4 symboles différentes. Étant donné que nous avons un mapping 4-aires cette valeur est celle qui satisfait le critère de Nyquist.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{eyediagram6.png}
+	\caption{Diagramme de l'oeil sans canal de propagation \label{figure: eyeDiagram6}} 
+\end{figure}
+
+En échantillonnant avec la valeur optimale déterminée grâce à la figure \ref{figure: eyeDiagram6}, le TEB est bien nul.
+
+\subsubsection{Chaine avec bruit}
+
+Nous allons maintenant ajouter un bruit gaussien à cette chaine de transmission. En théorie, nous sommes censés obtenir des résultats de la forme suivante : \\
+
+\begin{center}
+$TES = \frac{3}{2} \cdot Q(\sqrt{\frac{4}{5}\frac{E_b}{N_0}})$ \\
+$TEB = \frac{3}{4} \cdot Q(\sqrt{\frac{4}{5}\frac{E_b}{N_0}})$ \\
+\end{center}
+
+On peut alors observer la différence entre ces TEB et TES théoriques et leur valeur simulée sur les figures \ref{figure: TESthsim1} et \ref{figure: TEBthsim3}.
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{TESthsim1.png}
+       \caption{TES simulé et théorique en fonction de $\frac{E_b}{N_0}$ \label{figure: TESthsim1}} 
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+        \includegraphics[width=7cm]{TEBthsim3.png}
+		\caption{TEB simulé et théorique en fonction de $\frac{E_b}{N_0}$ \label{figure: TEBthsim3}} 
+    \end{center}
+\end{minipage}
+\end{figure}
+
+\subsection{Comparaison efficacité}
+
+Maintenant que nous avons implanté les différentes chaines de transmission nous pouvons les comparer.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{TEBComp1.png}
+	\caption{TEB simulé et théorique en fonction de $\frac{E_b}{N_0}$ \label{figure: TEBComp1}} 
+\end{figure}
+
+Premièrement, on peut observer que la chaine de référence, conformément au résultat attendu (puisque sans canal), a un TEB en dessous des deux autres chaines. Cependant, le TEB de la chaine avec le mapping en 2-aires est moins élevé que celui de la chaine avec le mapping en 4-aires, indiquant que cette dernière fait plus d'erreur de traduction symboles/bits; ce résultat est cohérent puisque pour la chaine en 4-aires, on réunit 2 bits sur le même symbole, réduisant le nombre de symboles à transmettre, mais en contrepartie augmentant le taux d'erreur.
+
+\section{Études de chaines de transmission sur fréquence porteuse}
+
+Dans cette partie, nous allons nous intéresser a la transmissions sur fréquence porteuse. Pour cela, nous allons dans un premier temps implanter deux chaines de transmissions avec la même modulation sur des chaines différentes mais équivalentes. Puis, nous implanterons quatre modulateurs différents afin de les comparer et déterminer les facteurs qui influent sur la qualité des signaux transmis.
+
+\subsection{Utilisation de la chaine passe-bas équivalente pour le calcul et
+l'estimation du taux d'erreur binaire}
+
+Pour la première implantation sur fréquence porteuse nous utiliserons une chaine de transmission QPSK avec un mapping de Gray. Les chaines de transmission équivalente sont représenté sur les figure \ref{figure: ChainePort1} et \ref{figure: ChainePort2}.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm]{ChainePorteuse1.png}
+	\caption{Chaîne de transmission sur porteuse \label{figure: ChainePort1}} 
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm]{ChainePorteuse2.png}
+	\caption{Chaîne de transmission passe-bas équivalente \label{figure: ChainePort2}} 
+\end{figure}
+
+\subsubsection{Implantation de la chaine sur fréquence porteuse}
+
+Pour la première chaine implanté nous allons nous appuyer sur la figure \ref{figure: ChainePort1}. Le signal aura un mapping de Gray. Les filtres de mise en forme et de réception seront des filtres en racine de cosinus surélevées avec comme roll-off $\alpha = 0.35$. Ce signal sera mis sur une fréquence porteuse $f_p = 2$ kHz. La figure \ref{figure: SigQuadPhases1} nous montre le signal après avoir été mis sur fréquence porteuse.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm]{SigQuadPhase1.png}
+	\caption{Signal sur fréquence porteuse \label{figure: SigQuadPhases1}} 
+\end{figure}
+
+Afin de vérifier que le signal soit bien sur la bonne fréquence nous allons nous intéresser a sa DSP, représenté sur la figure \ref{figure: DSPPort1}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm]{DSPPort1.png}
+	\caption{DSP du signal sur fréquence porteuse \label{figure: DSPPort1}} 
+\end{figure}
+
+On observe effectivement 2 pics dont la fréquence correspond à la fréquence porteuse, ce qui correspond au résultat attendu.\\
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{TEBthsim4.png}
+	\caption{TEB simulé et théorique en fonction de $\frac{E_b}{N_0}$ \label{figure: TEBComp1}} 
+\end{figure}
+
+\subsubsection{Implantation de la chaine passe-bas équivalente}
+
+Nous allons maintenant modifier la chaine precedente sur le modèle de la figure \ref{figure: ChainePort2}. Nous obtenons ainsi le signal transmis figure \ref{figure: SigQuadPhases2}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm]{SigQuadPhase2.png}
+	\caption{Signal sur fréquence porteuse \label{figure: SigQuadPhases2}} 
+\end{figure}
+
+Afin d'observer d'éventuelle changements nous traçons également la DSP du signal de la figure \ref{figure: SigQuadPhases2}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{DSPPort2.png}
+	\caption{DSP du signal sur fréquence porteuse \label{figure: DSPPort2}} 
+\end{figure}
+
+Cette DSP, contrairement à celle de la figure \ref{figure: DSPPort1}, n'est composé que d'un seul pic centré en 0. Cela est dû au fait que sur la seconde chaine de transmission, on n'utilise l'exponentielle complexe (qui provoque les deux pics de la première DSP). Ici, les parties transposition de fréquence, canal de transmission et retour en bande de base de la première chaine sont réunis dans le passe-bas équivalent.\\
+
+Maintenant que la chaine est implanté sans bruit nous allons pouvoir la tester avec des valeurs de $\frac{E_b}{N_0}$ allant de 0 à 6 dB. En plus d'observer l'effet de la variation du bruit sur le signal nous allons également voir l'effet sur la constellation du mapping après échantillonnage.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{ConstRef.png}
+	\caption{Constellation chaine de reference sortie de mapping \label{figure: ConstRef}} 
+\end{figure}
+
+Sur la figure \ref{figure: ConstRef} on peut voir que la constellation est parfaite, il n'y a que 4 valeurs possible. Cette constellation est tracé en sortie de mapping.
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{ConstEbN0_0.png}
+       \caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 0$ dB \label{figure: ConstEbN0_0}} 
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+        \includegraphics[width=7cm]{ConstEbN0_6.png}
+		\caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 6$ dB \label{figure: ConstEbN0_6}} 
+    \end{center}
+\end{minipage}
+\end{figure}
+
+Sur les figures \ref{figure: ConstEbN0_0} et \ref{figure: ConstEbN0_6}nous avons le tracé de la constellation pour deux valeurs de bruit. On observe que plus le rapport signal à bruit $\frac{E_b}{n_0}$ est élevé plus la constellation tend vers la constellation de la figure \ref{figure: ConstRef}. On devrait donc par la suite observer un TEB décroissant. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=11cm]{TEBComp2.png}
+	\caption{Comparaison TEB de la chaine équivalente et la chaine sur fréquence porteuse \label{figure: TEBComp2}} 
+\end{figure}
+
+On peut voir sur la figure \ref{figure: TEBComp2} que le TEB de la chaine sur fréquence porteuse et la chaine équivalente on un TEB qui suivent la même courbe. Cependant, on remarque quelques écarts entre ces deux courbes, cela est dû au retour en bande base du signal sur fréquence porteuse. En effet, le filtre de réception de la chaine figure \ref{figure: ChainePort1} fait office de passe-bas mais il ne coupe pas parfaitement il y a donc des résidus dû a cela.
+
+\subsection{Comparaison de modulations sur fréquence porteuse}
+
+Nous avons étudié precedemment les deux chaines en fréquence porteuse, on va maintenant pouvoir étudier different types de mapping. Ainsi, nous allons pouvoir les comparer et les classer en termes d'efficacité en puissance. Pour chacune des chaines nous allons avoir un filtre de mise en forme et de réception en racine de cosinus surélevée avec un roll-off $\alpha = 0.5$. De plus, le débit binaire sera de 48 kbps. En implantant ces chaines sans bruit nous obtenons bien un TEB nul.
+
+\subsubsection{Modulation 4-ASK}
+
+La constellation avec la modulation 4-ASK en sortie du mapping est tracé figure \ref{figure: Const4ASK}. De plus, sur les figures \ref{figure: Const4ASK_EbN0_0} et \ref{figure: Const4ASK_EbN0_6} nous pouvons observer cette constellation pour une valeur de $\frac{E_b}{n_0} = 0$ dB, respectivement $\frac{E_b}{n_0} = 6$ dB. On peut notamment observer que plus cette valeur est élevée plus les constellations ce rapproche de celle en sortie de mappeur.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{Const4ASK.png}
+	\caption{Comparaison TEB de la chaine équivalente et la chaine sur fréquence porteuse (4-ASK) \label{figure: Const4ASK}} 
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{Const4ASK_EbN0_0.png}
+       \caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 0$ dB (4-ASK) \label{figure: Const4ASK_EbN0_0}} 
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+        \includegraphics[width=7cm]{Const4ASK_EbN0_6.png}
+		\caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 6$ dB (4-ASK) \label{figure: Const4ASK_EbN0_6}} 
+    \end{center}
+\end{minipage}
+\end{figure}
+
+Le TEB théorique de ce modulateur est donné par la formule $TEB = \frac{3}{4}Q(\sqrt{\frac{4}{5} \frac{E_b}{N_0}})$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{TEBthsim4ASK.png}
+	\caption{TEB simulé et théorique modulateur 4-ASK \label{figure: TEBthsim4ASK}} 
+\end{figure}
+
+\subsubsection{Modulation QPSK}
+
+Les observations faites dans la section de la modulation 4-ASK restent vraies pour la modulation QPSK.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{ConstQPSK.png}
+	\caption{Comparaison TEB de la chaine équivalente et la chaine sur fréquence porteuse (QPSK) \label{figure: ConstQPSK}} 
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{ConstQPSK_EbN0_0.png}
+       \caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 0$ dB (QPSK) \label{figure: ConstQPSK_EbN0_0}} 
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+        \includegraphics[width=7cm]{ConstQPSK_EbN0_6.png}
+		\caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 6$ dB (QPSK) \label{figure: ConstQPSK_EbN0_6}} 
+    \end{center}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{TEBthsimQPSK.png}
+	\caption{TEB simulé et théorique modulateur QPSK \label{figure: TEBthsimQPSK}} 
+\end{figure}
+
+\subsubsection{Modulation 8-PSK}
+
+Les observations faites dans la section de la modulation 4-ASK restent vraies pour la modulation 8-PSK.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{Const8PSK.png}
+	\caption{Comparaison TEB de la chaine équivalente et la chaine sur fréquence porteuse (8-PSK) \label{figure: Const8PSK}} 
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{Const8PSK_EbN0_0.png}
+       \caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 0$ dB (8-PSK) \label{figure: Const8PSK_EbN0_0}} 
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+        \includegraphics[width=7cm]{Const8PSK_EbN0_6.png}
+		\caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 6$ dB (8-PSK) \label{figure: Const8PSK_EbN0_6}} 
+    \end{center}
+\end{minipage}
+\end{figure}
+
+Le TEB théorique de ce modulateur est donné par la formule $TEB = \frac{2}{3}Q(\sqrt{\frac{2 E_s}{N_0}} \sin(\frac{\pi}{8}))$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{TEBthsim8PSK.png}
+	\caption{TEB simulé et théorique modulateur 8-PSK \label{figure: TEBthsim8PSK}} 
+\end{figure}
+
+\subsubsection{Modulation 16-QAM}
+
+Les observations faites dans la section de la modulation 4-ASK restent vraies pour la modulation 16-QAM.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{Const16QAM.png}
+	\caption{Comparaison TEB de la chaine équivalente et la chaine sur fréquence porteuse (16-QAM) \label{figure: Const16QAM}} 
+\end{figure}
+
+\begin{figure}[H]
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+       \includegraphics[width=7cm]{Const16QAM_EbN0_0.png}
+       \caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 0$ dB (16-QAM) \label{figure: Const16QAM_EbN0_0}} 
+    \end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+    \begin{center}
+        \includegraphics[width=7cm]{Const16QAM_EbN0_6.png}
+		\caption{Constellation chaine de référence sortie d'échantillonneur $\frac{E_b}{n_0} = 6$ dB (16-QAM) \label{figure: Const16QAM_EbN0_6}} 
+    \end{center}
+\end{minipage}
+\end{figure}
+
+Le TEB théorique de ce modulateur est donné par la formule $TEB = \frac{3}{4}Q(\sqrt{\frac{4}{5}\frac{E_b}{N_0}})$
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=12cm]{TEBthsim16QAM.png}
+	\caption{TEB simulé et théorique modulateur 16-QAM \label{figure: TEBthsim16QAM}} 
+\end{figure}
+
+\subsubsection{Comparaison des chaines de transmission}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=13cm]{TEBComp4.png}
+	\caption{Comparaison du TEB des differents modulateur \label{figure: TEBComp4}} 
+\end{figure}
+
+efficacité en puissance : $$\eta = \frac{1}{T_b} \cdot \log_2(M)$$
+
+
+\end{document} 

@@ -73,7 +73,7 @@ N = 81;
 hc = (2 * Fc/Fe) * sinc(2 * (Fc/Fe) * [-(N - 1)/2 : 1 : (N - 1)/2]);
 newg = conv(hc, g);
 newN = length(newg);
-figure, plot([-(newN - 1)/2 : 1 : (newN - 1)/2],newg);
+figure,plot([-(newN - 1)/2 : 1 : (newN - 1)/2],newg);
 
 % 2.
 Signal_decal = [Signal ; zeros((N+1)/2,1)];

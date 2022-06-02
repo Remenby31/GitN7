@@ -190,6 +190,7 @@ Lt = 0:Te:((nbit/2)*Ns-1)*Te;
 figure, plot(Lt,signal_filtre_s);
 xlabel("temps (s)");
 ylabel("Amplitude (V)");
+title("yihou");
 
 eyediagram(signal_filtre_s(Ns:end),Ns);
 % N0 = Ns

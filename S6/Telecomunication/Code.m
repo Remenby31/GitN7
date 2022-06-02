@@ -98,7 +98,6 @@ xlim([-1.2*10^4 1.2*10^4])
 legend("DSP Modulateur 1","DSP Modulateur 2","DSP Modulateur 3");
 xlabel("Frequence (f)");
 ylabel("Amplitude (V)");
-figure;
 
 % DSP Théoriques
 semilogy(Lf,dsp1T,Lf,dsp2T,Lf,dsp3T);
@@ -137,17 +136,16 @@ hr = ones(Ns,1); % filtre de reception
 
 % Reponse impulsionnelle de la chaine [Filtre mise en forme + Filtre reception]
 z = zeros(size(hr));
-h1 = [z; h];
-h1 = [h1; z];
-h2 = hr;
-ImpChaine = conv(h1,h2);
+h1 = [h; z];
+hr = [h; z];
+ImpChaine = conv(h1,hr);
 
 plot(linspace(0,1/8000,length(h1)), h1, linspace(0,1/8000,length(ImpChaine)), ImpChaine);
 title("Reponse impulsionnelle de la chaine (convolution)");
 ylabel("Amplitude (V)");
 xlabel("temps (t)");
 legend("h","convolution");
-figure;
+
 
 %% ==== Sequence 3 ====
 
@@ -171,7 +169,6 @@ yb = x + bruit; % Avec Bruit
 yb = x; % Sans Bruit
 yb = filter(hr,1,yb); % Filtre en réception (symétrique du filtre de modulation)
 eyediagram(yb(Ns:end),Ns);
-
 
 % Affichage du signal avant et apres le canal (Bruit + Filtre Reception)
 plot(linspace(0,1/8000,length(yb)),yb,linspace(0,1/8000,length(x)),x.*10);
